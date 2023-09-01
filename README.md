@@ -1,6 +1,16 @@
 # mongoose-error-humanizer
 Mongoose post hook handler to automatically convert validation and dup errors into human friendly strings
 
+## Example Error Messages
+| Case | Message |
+| ----------- | ----------- |
+| required field missing | `name required` |
+| multiple, required fields missing | `email required, name required` |
+| index (unique) violation | `email must be unique` |
+| enum violation | `country cannot be other` |
+
+Thrown errors are of type `MongooseHumanError` (an extension of the `Error` class).
+
 ## Usage
 
 ```js

@@ -37,20 +37,20 @@ describe('prettier', function () {
   it('throws when required field is missing', async function () {
     await assert.rejects(async function () {
       await Model.create({})
-    }, { name: 'Error', message: 'phone required, email required, name required' })
+    }, { name: 'MongooseHumanError', message: 'phone required, email required, name required' })
   })
 
   it('throws on unique field violation', async function () {
     await assert.rejects(async function () {
       await Model.create({ name: 'shiv', email: 'shiv1@domain.com', phone: '123' })
       await Model.create({ name: 'shiv', email: 'shiv2@domain.com', phone: '456' })
-    }, { name: 'Error', message: 'name must be unique' })
+    }, { name: 'MongooseHumanError', message: 'name must be unique' })
   })
 
   it('throws on field enum violation', async function () {
     await assert.rejects(async function () {
       await Model.create({ name: 'shiv', email: 'shiv1@domain.com', phone: '123', country: 'other' })
-    }, { name: 'Error', message: 'country cannot be other' })
+    }, { name: 'MongooseHumanError', message: 'country cannot be other' })
   })
 
 })
