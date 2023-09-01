@@ -1,0 +1,22 @@
+{
+  "name": "mongoose-error-humanizer",
+  "version": "1.0.0",
+  "description": "Mongoose post hook handler to automatically convert validation and dup errors into human friendly strings",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivpatel/mongoose-error-humanizer.git"
+  },
+  "scripts": {
+    "test": "mocha --full-trace index.spec.js"
+  },
+  "author": "Shiv Patel",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "mongodb-memory-server": "^8.15.1",
+    "mongoose": "^7.5.0"
+  }
+}
