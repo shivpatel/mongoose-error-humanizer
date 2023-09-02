@@ -1,6 +1,6 @@
 {
   "name": "mongoose-error-humanizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mongoose post hook handler to automatically convert validation and dup errors into human friendly strings",
   "main": "index.js",
   "repository": {
